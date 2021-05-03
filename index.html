@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <p></p>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <!--<div class="col">**</div>-->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body" style="background-color: rgba(173, 250, 250, 0.664);">
+
+                        <p style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', serif; text-align: center;">DATOS DEL EMPLEADO</p>
+                        
+                            <div class="form-row">
+                              <div class="col-md-6 mb-3">
+                                  <!--Sueldo-->
+                                <label for="validationTooltip01" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Sueldo</label>
+                                <input type="text" class="form-control" id="sueldo" placeholder="Ingresa tu sueldo" required>
+                                <div class="valid-tooltip">
+                                  
+                                </div>
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                  <!--Edad-->
+                                <label for="validationTooltip02" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Edad</label>
+                                <input type="text" class="form-control" id="edad" placeholder="Ingresa tu edad" required>
+                                <div class="valid-tooltip">
+                               
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col-md-6 mb-3">
+                                  <!--Nacionalidad-->
+                                <label for="validationTooltip03" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Nacionalidad</label>
+                                <select class="custom-select" id="nacionalidad" required>
+                                    <option value="0">Nacional</option>
+                                    <option value=".05">Extranjero</option>
+                                  </select>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                  <!--Sexo-->
+                                <label for="validationTooltip04" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Sexo</label>
+                                <select class="custom-select" id="sexo" required>
+                                  <option selected disabled value="">Selecciona</option>
+                                  <option value=".03">Femenino</option>
+                                  <option value="0">Masculino</option>
+                                </select>
+                               
+                              </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <!--Cursos-->
+                                  <label for="validationTooltip03" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Cursos</label>
+
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="20" id="php">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                      PHP
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="40" id="asp">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                      ASP.Net 
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="55" id="vb">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                      VB.Net
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="35" id="java">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                      Java
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="60" id="oracle">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                      Oracle
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="15" id="db">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                      Introduccion a BD
+                                    </label>
+                                  </div>
+
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                  <label for="validationTooltip04"style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Antiguedad</label>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="antiguedad" id="unoCinco" value=".05" >
+                                    <label class="form-check-label" for="exampleRadios1">
+                                      1 a 5 años
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="antiguedad" id="seisDies" value=".1" >
+                                    <label class="form-check-label" for="exampleRadios1">
+                                      6 a 10 años
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="antiguedad" id="masDeDies" value=".15" >
+                                    <label class="form-check-label" for="exampleRadios1">
+                                      Mas de 10 años
+                                    </label>
+                                  </div>
+                                    <br>
+                                  <div class="form-group">
+                                    <label for="exampleFormControlTextarea1" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Bono</label>
+                                    <textarea class="form-control" id="bono" rows="3"></textarea>
+                                  </div>
+
+                                </div>
+                              </div>
+                            
+                            <button class="btn btn-primary" onclick="calcular()">Calcular</button>
+                            <button class="btn btn-primary" onclick="nuevo()">Nuevo Calculo</button>
+                            <button class="btn btn-primary" onclick="salir()">Salir</button>
+                          
+                    </div>
+                  </div>
+            </div>
+           <!-- <div class="col">**</div>-->
+        </div>
+        
+    </div>
+</body>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="examen.js"></script>
+</html>
